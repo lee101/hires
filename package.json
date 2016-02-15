@@ -4,7 +4,8 @@
   "description": "hires.nz ",
   "main": "app.js",
   "scripts": {
-    "test": "npm test\u001b[D\u001b[D\u001b[D\u001b[Dgulp test"
+    "start": "node bin/www",
+    "test": "mocha 'test/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -14,11 +15,9 @@
     "hires",
     "hire",
     "trailers",
-    "hire",
     "cars"
   ],
   "author": "lee penkman",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/lee101/hires/issues"
   },
