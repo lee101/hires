@@ -1,0 +1,26 @@
+{
+  "name": "hires",
+  "version": "1.0.0",
+  "description": "hires.nz ",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test\u001b[D\u001b[D\u001b[D\u001b[Dgulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lee101/hires.git"
+  },
+  "keywords": [
+    "hires",
+    "hire",
+    "trailers",
+    "hire",
+    "cars"
+  ],
+  "author": "lee penkman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lee101/hires/issues"
+  },
+  "homepage": "https://github.com/lee101/hires#readme"
+}
