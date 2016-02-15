@@ -21,5 +21,16 @@
   "bugs": {
     "url": "https://github.com/lee101/hires/issues"
   },
-  "homepage": "https://github.com/lee101/hires#readme"
+  "homepage": "https://github.com/lee101/hires#readme",
+  "dependencies": {
+    "URIjs": "^1.16.1",
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "less-middleware": "^2.0.1",
+    "nunjucks": "2.3.0",
+    "sequelize": "^3.19.2",
+    "serve-favicon": "^2.3.0"
+  }
 }

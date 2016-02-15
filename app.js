@@ -6,8 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var rings = require('./routes/rings');
-var ring = require('./routes/ring');
 var sitemap = require('./routes/sitemap');
 
 var app = express();

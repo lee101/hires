@@ -1,0 +1,330 @@
+@import 'variables';
+//@import '../../bower_components/lesshat/build/lesshat';
+@import 'mixins/box-shadow';
+@import 'mixins/mixins';
+@import 'search';
+
+body {
+    background: #fafafa;
+    font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 60px;
+}
+
+h1 {
+    color: @main-color;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+[drawer] {
+    background-color: #EEEEEE;
+}
+
+paper-toolbar {
+    background-color: #fff;
+}
+
+ring-submenu {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+paper-button {
+    background-color: @secondary-color;
+    color: #FAFAFA;
+}
+
+paper-button[disabled] {
+    background-color: lighten(@secondary-color, 30%);
+    color: #FAFAFA;
+    cursor: auto;
+    pointer-events: none;
+}
+
+paper-icon-button.close-icon:hover {
+    background: var(--paper-light-blue-50);
+    border-radius: 50%;
+}
+
+paper-icon-button.close-icon::shadow #icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+paper-menu.paper-menu-0 {
+    background: none;
+    padding-left: 50px;
+}
+
+.main-core-toolbar {
+    color: #FAFAFA !important;
+    background-color: @secondary-color !important;
+    z-index: 999999999;
+}
+
+.default-toolbar {
+    background-color: #fff !important;
+}
+
+/// Justified Gallery
+
+.justified-gallery > a > .caption,
+.justified-gallery > div > .caption,
+{
+    opacity: .7 !important;
+    min-height: 32px;
+    padding: 16px 0px 0px 16px;
+    margin: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+    background-color: @secondary-color;
+
+}
+
+.jg-entry {
+    .transition(all .3s);
+    background-color: #fff;
+}
+
+.justified-gallery .img-fullscreen {
+    pointer-events: none;
+    opacity: .5;
+    z-index: -5;
+}
+
+/// Nst Slider
+@range-slider-width: 195px;
+@range-slider-grip-radius: 10px;
+@slider-margin: 23px;
+.nstSlider {
+    width: @range-slider-width;
+    background-color: @secondary-color;
+    border: 2px solid gray;
+    margin-top: 4px;
+    margin-right: @slider-margin;
+    margin-left: @slider-margin;
+    margin-bottom: 10px;
+
+    .bar,
+    .leftGrip,
+    .rightGrip,
+    {
+        background-color: white;
+    }
+    .leftGrip,
+    .rightGrip,
+    {
+        border: 1px solid gray;
+        top: -1px;
+    }
+
+    .bar {
+        opacity: 0.7;
+    }
+    paper-tooltip::shadow div {
+        cursor: default;
+    }
+}
+
+// Tooltips
+
+.grip-label {
+    font-size: 18px;
+}
+
+.rightLabel {
+    float: right;
+    margin-right: @slider-margin + 11;
+}
+.leftLabel {
+    float: left;
+    margin-left: @slider-margin;
+}
+
+paper-tooltip::shadow *,
+{
+    cursor: default;
+}
+
+paper-tooltip::shadow div,
+{
+    background-color: #607D8B;
+}
+
+paper-tooltip::shadow .top::after,
+{
+    border-top-color: @secondary-color;
+}
+
+.price-range {
+    margin-top: 9px;
+}
+
+paper-header-panel::shadow {
+    #topBar.paper-toolbar {
+        z-index: 3;
+    }
+    paper-toolbar:after, .paper-header:after {
+        //        z-index: 0;
+    }
+}
+
+paper-drawer-panel::shadow #drawer.offcanvas {
+    transform: translateX(-256px);
+}
+
+// load more
+.gallery-load-more {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ring-spinner {
+    position: fixed;
+    z-index: 9999999;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 128px;
+    margin-bottom: 0;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    ::shadow #spinnerContainer {
+        width: 100px;
+        height: 100px;
+        .circle {
+            border-width: 10px;
+            border-color: @main-color;
+        }
+    }
+}
+
+paper-spinner::shadow #spinnerContainer {
+    .circle {
+        border-color: @main-color;
+    }
+}
+
+paper-radio-group {
+    padding-top: 0;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 16px;
+}
+
+paper-radio-button {
+    --paper-radio-button-checked-color: @main-color;
+    --paper-radio-button-checked-ink-color: @main-color;
+    --paper-radio-button-unchecked-color: @secondary-color;
+    --paper-radio-button-unchecked-ink-color: @secondary-color;
+}
+
+iron-icon.padded-icon {
+    width: 42px;
+    margin-right: 8px;
+}
+
+.sidebar-ad {
+    min-height: 400px;
+}
+
+.main-body-ad {
+    width: 100%;
+    min-height: 500px;
+}
+
+.hidden-detail {
+    margin: 20px;
+    @media (min-width: 550px) {
+        margin: 20px;
+    }
+
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+.close-icon {
+    float: right;
+}
+
+.ring-link {
+    color: @main-color;
+    font-size: 18px;
+}
+
+.ring-description {
+    color: @secondary-color;
+    font-size: 17px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    max-width: 400px;
+}
+
+.fullscreen-tile {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 9999;
+}
+
+.mm-sharing-btns {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    .font-size(1.9);
+    a {
+        text-decoration: none;
+        display: block;
+    }
+}
+
+.mm-share-btn {
+    font-size: @base-font-size *2;
+    color: @facebook-blue;
+}
+
+.mm-share-btn--twitter {
+    color: @twitter-blue;
+}
+
+.mm-share-btn--google-plus {
+    color: @google-plus-red;
+}
+
+.mm-share-btn--pinterest {
+    color: @pinterest-red;
+}
+
+.mm-share-btn--linked-in {
+    color: @linked-in-blue;
+}
+
+.mm-share-btn--reddit {
+    color: @reddit-blue;
+}
+
+.mm-share-btn--stumbleupon {
+    color: @stumble-upon-orange;
+}
