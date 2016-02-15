@@ -135,7 +135,7 @@ else if (CI) {
     });
 }
 else {
-    var sequelize = new Sequelize('ring', 'postgres', 'postgres', {
+    var sequelize = new Sequelize('hires', 'postgres', 'root', {
         host: 'localhost',
         dialect: 'postgres',
         pool: {
